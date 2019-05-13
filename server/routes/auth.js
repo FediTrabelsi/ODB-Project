@@ -108,7 +108,7 @@ router.post('/login',(req,res)=>{
                         }else{
                             const token =jwt.sign({userId: user._id },config.secret,{expiresIn :'30m'});
                             res.json({success: true , message : 'Redirecting to home page ....',token: token,user :{username: user.username,
-                            userId: user._id}});
+                            userId: user._id, odbId: user.odbId}});
                         }
                     }
                 }

@@ -1,0 +1,91 @@
+<app-nav-bar></app-nav-bar>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h3>Latest mesures</h3>
+      </div>
+    <div class="car-body">
+    <div class="row col-md-6 col-md-offset-2 custyle">
+    <table class="table table-striped custab">
+
+        <thead>
+            <tr>
+                <th>Mesure Date</th>
+                <th>Fuel Level</th>
+                <th>Fuel Flow rate</th>
+                <th>speed</th>
+                <th>Fuel km/L</th>
+                <th>Rpm</th>
+                <th>Oil Temp</th>
+                <th>Cooler Temp</th>
+                <th>Co2 exhaust</th>
+                <th>Catlyst Temp</th>
+                <th>Air ratio</th>
+                <th>Gps</th>
+            </tr>
+        </thead>
+                <tr *ngIf="data" >
+                    <td>{{data[data?.length-1]?.mesureTime}}</td>
+                    <td>{{data[data?.length-1]?.fuelLevel}}</td>
+                    <td>{{data[data?.length-1]?.fuelFlowRate}}</td>
+                    <td>{{data[data?.length-1]?.speed}}</td>
+                    <td>{{data[data?.length-1]?.fuelKmByLiter}}</td>
+                    <td>{{data[data?.length-1]?.Rpm}}</td>
+                    <td>{{data[data?.length-1]?.OilTemp}}</td>
+                    <td>{{data[data?.length-1]?.CoolTemp}}</td>
+                    <td>{{data[data?.length-1]?.Co2Ex}}</td>
+                    <td>{{data[data?.length-1]?.CatTemp}}</td>
+                    <td>{{data[data?.length-1]?.AirRatio}}</td>
+                    <td>{{data[data?.length-1]?.Gps}}</td>
+                </tr>
+    </table>
+    </div>
+  </div>
+  <div class="card-header">
+      <h3>All mesures</h3>
+    </div>
+    <div class="car-body">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+        <table class="table table-striped custab">
+            <thead>
+                <tr>
+                    <th>Mesure Date</th>
+                    <th>Fuel Level</th>
+                    <th>Fuel Flow rate</th>
+                    <th>speed</th>
+                    <th>Fuel km/L</th>
+                    <th>Rpm</th>
+                    <th>Oil Temp</th>
+                    <th>Cooler Temp</th>
+                    <th>Co2 exhaust</th>
+                    <th>Catlyst Temp</th>
+                    <th>Air ratio</th>
+                    <th>Gps</th>
+                </tr>
+            </thead>
+                    <tr *ngFor="let item of data">
+                        <td>{{item.mesureTime}}</td>
+                        <td>{{item.fuelLevel}}</td>
+                        <td>{{item.fuelFlowRate}}</td>
+                        <td>{{item.speed}}</td>
+                        <td>{{item.fuelKmByLiter}}</td>
+                        <td>{{item.Rpm}}</td>
+                        <td>{{item.OilTemp}}</td>
+                        <td>{{item.CoolTemp}}</td>
+                        <td>{{item.Co2Ex}}</td>
+                        <td>{{item.CatTemp}}</td>
+                        <td>{{item.AirRatio}}</td>
+                        <td>{{item.Gps}}</td>
+                    </tr>
+
+        </table>
+        </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,98 @@
+<app-nav-bar></app-nav-bar>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="node_modules/chart.js/Chart.min.js"></script>
+<script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <div class="card" >
+      <div class="card-header">
+        <h3>Speed variation</h3>
+      </div>
+    <div class="car-body">
+
+              <div flex-gt-sm="50">
+                <div class="pad">
+                  <div [style.height.px]="250">
+                    <ngx-charts-bar-vertical
+                      [results]="single"
+                      [view]=[1200,300]
+                      [scheme]="{ domain: [ '#30E07B', '#E75691', '#00C0FF', '#5D6A75' ] }"
+                      [barPadding]="10"
+                      [gradient]="true"
+                      [xAxis]="true"
+                      [yAxis]="true"
+                      [legend]="true"
+                      [legendTitle]="'Legenda'"
+                      [xAxisLabel]="'Time'"
+                      [yAxisLabel]="'Speed'"
+                      [showXAxisLabel]="true"
+                      [showYAxisLabel]="true">
+                    </ngx-charts-bar-vertical>
+
+              </div>
+            </div>
+          </div>
+  </div>
+
+  <div class="card-header">
+      <h3>Fuel flow rate</h3>
+    </div>
+    <div class="car-body">
+      <div flex-gt-sm="50">
+        <div class="pad">
+          <div [style.height.px]="250">
+            <ngx-charts-bar-vertical
+              [results]="flow"
+              [view]=[1200,300]
+              [scheme]="{ domain: [ '#30E07B', '#E75691', '#00C0FF', '#5D6A75' ] }"
+              [barPadding]="10"
+              [gradient]="true"
+              [xAxis]="true"
+              [yAxis]="true"
+              [legend]="true"
+              [legendTitle]="'Legenda'"
+              [xAxisLabel]="'Time'"
+              [yAxisLabel]="'Fuel flow rate'"
+              [showXAxisLabel]="true"
+              [showYAxisLabel]="true">
+            </ngx-charts-bar-vertical>
+
+      </div>
+    </div>
+  </div>
+      </div>
+
+  <div class="card-header">
+    <h3>Oil Tempeture</h3>
+  </div>
+  <div class="car-body">
+    <div flex-gt-sm="50">
+      <div class="pad">
+        <div [style.height.px]="250">
+          <ngx-charts-bar-vertical
+            [results]="oil"
+            [view]=[1200,300]
+            [scheme]="{ domain: [ '#30E07B', '#E75691', '#00C0FF', '#5D6A75' ] }"
+            [barPadding]="10"
+            [gradient]="true"
+            [xAxis]="true"
+            [yAxis]="true"
+            [legend]="true"
+            [legendTitle]="'Legenda'"
+            [xAxisLabel]="'Time'"
+            [yAxisLabel]="'Oil Temp'"
+            [showXAxisLabel]="true"
+            [showYAxisLabel]="true">
+          </ngx-charts-bar-vertical>
+
+    </div>
+  </div>
+</div>
+    </div>
+
+  </div>
+</div>
